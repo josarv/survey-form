@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="application-name" content="Survey Form">
+        <meta name="description" content="A survey form webpage">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1 id="title" class="text-center">CEID Survey Form</h1>
+                <p id="description" class="text-center">Help your suffering improve CEID</p>
+            </header>
+            <main>
+                <form id="survey-form">
+                    <fieldset>
+                        <legend>Personal information:</legend>
+                        <div class="form-question">
+                            <label id="name-label" for="name">Name: </label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-question">
+                            <label id="email-label" for="email">Email: </label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-question">
+                            <label id="number-label" for="number">Age <span class="clue">(optional)</span>: </label>
+                            <input type="number" id="number" name="number" class="form-control" placeholder="Enter your age" min="18" max="100">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Academic information:</legend>
+                        <div class="form-question">
+                            <label id="dropdown-label">Studies year:
+                                <select id="dropdown" class="form-control" required>
+                                    <option value="">Select current year of study</option>
+                                    <option value="1">First Year</option>
+                                    <option value="2">Second Year</option>
+                                    <option value="3">Third Year</option>
+                                    <option value="4">Fourth Year</option>
+                                    <option value="5">Fifth Year</option>
+                                    <option value="6">Beyond</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="form-question">
+                            <label><input type="radio" name="semester" value="fall" class="inline"> Fall semester</label>
+                            <label><input type="radio" name="semester" value="spring" class="inline"> Spring semester</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Enlighten us with your experiences  <span class="clue">(Check all that apply)</span>:</legend>
+                        <div class="form-question">
+                            <label><input type="checkbox" name="Gounaridis" value="yes"> I've worked out with Gounaridis</label>
+                            <label><input type="checkbox" name="Andrikopoulos" value="yes"> I've witnessed Ntina 32 call Andrikopoulos</label>
+                            <label><input type="checkbox" name="Nikolos" value="yes"> I've failed Nikolos' courses 5 times each</label>
+                            <label><input type="checkbox" name="Tsakalidis" value="yes"> I've spoken to Tsakalidis for 3 hours</label>
+                            <label><input type="checkbox" name="Psarakis" value="yes"> I've drank alcohol with Psarakis</label>
+                        </div>
+                        <div class="form-question">
+                            <label for="story">Tell us your story: </label>
+                            <textarea id="story" name="story" rows="3" cols="30" placeholder="It all begun when..."></textarea>
+                        </div>
+                    </fieldset>
+                    <div class="form-question"><button type="submit" id="submit">Submit</button></div>
+                </form>
+            </main>
+            <footer>
+                <p class="text-center">Visit our glorious department's <a href="https://www.ceid.upatras.gr/" target="_blank">website</a>.</p>
+            </footer>
+        </div>
+    </body>
+</html>
